@@ -483,7 +483,7 @@ h6 {
   left: 50%;
   display: inline-block;
   margin-top: 18px;
-  padding: 9px 31px;
+  padding: 10px 31px;
   color: white;
   font-size: 15px;
   text-decoration: none;
@@ -2147,6 +2147,19 @@ h6 {
   .pricing {
     padding: 0 50px;
   }
+  .pricing__content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  .pricing__column {
+    margin-top: 34px;
+    margin-right: 15px;
+  }
+  .pricing__column:last-child {
+    margin-right: 0;
+  }
   .saying {
     padding: 0 50px;
   }
@@ -2215,7 +2228,7 @@ h6 {
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
-    margin-top: 110px;
+    margin-top: 83px;
     padding: 0 150px;
   }
   .header__left {
@@ -2233,6 +2246,7 @@ h6 {
   }
   .header__subtitle {
     width: 95%;
+    margin-top: 9px;
     padding: 0;
     font-size: 35px;
     line-height: 130%;
@@ -2240,12 +2254,14 @@ h6 {
     text-align: left;
   }
   .header__subtitle::after {
-    margin-top: 33px;
+    margin-top: 31px;
     margin-left: 7px;
     content: "";
   }
   .header__desc {
+    display: inline-block;
     width: 90%;
+    margin-top: 3px;
     padding: 0;
     text-align: left;
   }
@@ -2259,7 +2275,7 @@ h6 {
     position: absolute;
     right: 0;
     width: 360px;
-    margin-top: 30px;
+    margin-top: 57px;
   }
   .header__form_title {
     font-size: 20px;
@@ -2358,18 +2374,22 @@ h6 {
   .tabs__left {
     width: 55%;
   }
+  .tabs__item {
+    font-size: 14px;
+  }
   .tabs__img {
     display: inline-block;
     margin-top: 24px;
     margin-right: 3px;
   }
   .sub-list__inner {
-    margin: 110px 0 120px 0;
+    margin: 80px 0 120px 0;
     padding: 0 150px;
   }
   .sub-list__img {
     width: 454px;
     height: 300px;
+    margin-top: 48px;
     -webkit-box-shadow: 0px 8px 10px 6px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 8px 10px 6px rgba(0, 0, 0, 0.3);
   }
@@ -2378,6 +2398,12 @@ h6 {
   }
   .standart {
     padding: 0 125px 0 150px;
+  }
+  .standart__title {
+    text-align: left;
+  }
+  .standart__title:after {
+    margin: 24px 0 0 0;
   }
   .standart__par {
     width: 84%;
@@ -2398,11 +2424,89 @@ h6 {
   .pricing {
     padding: 0 143px;
   }
+  .pricing__inner {
+    margin-top: 102px;
+  }
+  .pricing__title::after {
+    margin-top: 22px;
+  }
+  .pricing__column {
+    width: calc(33.3333% - 25px);
+    margin-top: 99px;
+    margin-right: 30px;
+  }
+  .pricing__column:nth-child(2) {
+    margin-top: 65px;
+  }
+  .pricing__item {
+    -webkit-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  .pricing__item:first-child {
+    border-top: 0;
+  }
   .saying {
     padding: 0 170px;
   }
+  .saying__inner {
+    margin-top: 161px;
+  }
+  .saying__title {
+    -webkit-transform: translate(0px, 3px);
+    -ms-transform: translate(0px, 3px);
+    transform: translate(0px, 3px);
+  }
+  .saying__title::after {
+    margin-top: 22px;
+    -webkit-transform: translateX(2px);
+    -ms-transform: translateX(2px);
+    transform: translateX(2px);
+  }
+  .saying__subtitle {
+    margin-top: 30px;
+  }
+  .saying__content {
+    margin-top: 53px;
+  }
   .saying__column {
     width: calc(33.3333% - 80px);
+  }
+  .saying__name {
+    -webkit-transform: translate(6px, -6px);
+    -ms-transform: translate(6px, -6px);
+    transform: translate(6px, -6px);
+  }
+  .saying__position {
+    -webkit-transform: translate(0px, -4px);
+    -ms-transform: translate(0px, -4px);
+    transform: translate(0px, -4px);
+  }
+  .contact__inner {
+    margin-bottom: 0px;
+  }
+  .contact__title::after {
+    -webkit-transform: translate(0, -2px);
+    -ms-transform: translate(0, -2px);
+    transform: translate(0, -2px);
+  }
+  .contact__subtitle {
+    margin-top: 22px;
+    -webkit-transform: translateX(2px);
+    -ms-transform: translateX(2px);
+    transform: translateX(2px);
+  }
+  .contact__area {
+    height: 100%;
+    font-size: 15.5px;
+  }
+  .contact__btn {
+    padding: 12px 27px;
+    font-size: 14px;
+  }
+  .contact__btn:hover {
+    -webkit-box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.3);
   }
 }
 
