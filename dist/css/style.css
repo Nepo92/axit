@@ -2184,7 +2184,7 @@ h6 {
     margin-top: 68px;
   }
   .contact {
-    padding: 0 150px 168px 142px;
+    padding: 0 150px 30px 142px;
   }
   .contact__inner {
     margin-top: 100px;
@@ -2484,6 +2484,7 @@ h6 {
   }
   .contact__inner {
     margin-bottom: 0px;
+    padding-bottom: 168px;
   }
   .contact__title::after {
     -webkit-transform: translate(0, -2px);
