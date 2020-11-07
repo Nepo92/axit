@@ -160,44 +160,22 @@ h6 {
   animation: menuOpened_row;
   -webkit-animation-duration: 0.2s;
   animation-duration: 0.2s;
-  -webkit-animation-delay: 0.2s;
-  animation-delay: 0.2s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 
 .top-bar__checkbox:checked ~ .top-bar__btn .top-bar__row::before {
   margin-top: 0;
-  -webkit-transition-delay: 0s;
-  -o-transition-delay: 0s;
-  transition-delay: 0s;
-  -webkit-transition-duration: 0.2s;
-  -o-transition-duration: 0.2s;
-  transition-duration: 0.2s;
-  -webkit-transition-property: margin;
-  -o-transition-property: margin;
-  transition-property: margin;
   -webkit-animation: menuOpened_rowBefore;
   animation: menuOpened_rowBefore;
   -webkit-animation-duration: 0.2s;
   animation-duration: 0.2s;
-  -webkit-animation-delay: 0.2s;
-  animation-delay: 0.2s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 
 .top-bar__checkbox:checked ~ .top-bar__btn .top-bar__row::after {
   margin-top: 0;
-  -webkit-transition-delay: 0s;
-  -o-transition-delay: 0s;
-  transition-delay: 0s;
-  -webkit-transition-duration: 0.2s;
-  -o-transition-duration: 0.2s;
-  transition-duration: 0.2s;
-  -webkit-transition-property: margin;
-  -o-transition-property: margin;
-  transition-property: margin;
 }
 
 .top-bar__checkbox:checked ~ .top-bar__nav {
@@ -218,15 +196,6 @@ h6 {
 
 .top-bar__checkbox:not(checked) ~ .top-bar__btn .top-bar__row::before {
   margin-top: -8px;
-  -webkit-transition-delay: 0.2s;
-  -o-transition-delay: 0.2s;
-  transition-delay: 0.2s;
-  -webkit-transition-duration: 0.2s;
-  -o-transition-duration: 0.2s;
-  transition-duration: 0.2s;
-  -webkit-transition-property: margin;
-  -o-transition-property: margin;
-  transition-property: margin;
   -webkit-animation: menuClosed_rowBefore;
   animation: menuClosed_rowBefore;
   -webkit-animation-duration: 0.2s;
@@ -237,15 +206,6 @@ h6 {
 
 .top-bar__checkbox:not(checked) ~ .top-bar__btn .top-bar__row::after {
   margin-top: 8px;
-  -webkit-transition-delay: 0.2s;
-  -o-transition-delay: 0.2s;
-  transition-delay: 0.2s;
-  -webkit-transition-duration: 0.2s;
-  -o-transition-duration: 0.2s;
-  transition-duration: 0.2s;
-  -webkit-transition-property: margin;
-  -o-transition-property: margin;
-  transition-property: margin;
   -webkit-animation: menuClosed_rowBefore;
   animation: menuClosed_rowBefore;
   -webkit-animation-duration: 0.2s;

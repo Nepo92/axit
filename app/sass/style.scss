@@ -99,26 +99,18 @@ h6 {
     &:checked ~ .top-bar__btn .top-bar__row {
       animation: menuOpened_row;
       animation-duration: 0.2s;
-      animation-delay: 0.2s;
       animation-fill-mode: forwards;
     }
 
     &:checked ~ .top-bar__btn .top-bar__row::before {
       margin-top: 0;
-      transition-delay: 0s;
-      transition-duration: 0.2s;
-      transition-property: margin;
       animation: menuOpened_rowBefore;
       animation-duration: 0.2s;
-      animation-delay: 0.2s;
       animation-fill-mode: forwards;
     }
 
     &:checked ~ .top-bar__btn .top-bar__row::after {
       margin-top: 0;
-      transition-delay: 0s;
-      transition-duration: 0.2s;
-      transition-property: margin;
     }
 
     &:checked ~ .top-bar__nav {
@@ -134,9 +126,6 @@ h6 {
 
     &:not(checked) ~ .top-bar__btn .top-bar__row::before {
       margin-top: -8px;
-      transition-delay: 0.2s;
-      transition-duration: 0.2s;
-      transition-property: margin;
       animation: menuClosed_rowBefore;
       animation-duration: 0.2s;
       animation-fill-mode: forwards;
@@ -144,9 +133,6 @@ h6 {
 
     &:not(checked) ~ .top-bar__btn .top-bar__row::after {
       margin-top: 8px;
-      transition-delay: 0.2s;
-      transition-duration: 0.2s;
-      transition-property: margin;
       animation: menuClosed_rowBefore;
       animation-duration: 0.2s;
       animation-fill-mode: forwards;
