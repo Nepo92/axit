@@ -44,7 +44,7 @@ function createCss() {
     }))
     .pipe(autoprefixer({
       overrideBrowserslist: ['last 5 versions'],
-      cascade: false,
+      cascade: true,
     }))
     .pipe(webpCSS())
     .pipe(gulp.dest('dist/css'))

@@ -1,25 +1,5 @@
-@import "_variables.scss";
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Open Sans", "sans-serif";
-  cursor: default;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  padding: 0;
-}
+@import "./blocks/variables.scss";
+@import "./blocks/settings.scss";
 
 .container {
   width: 100%;
@@ -42,11 +22,11 @@ h6 {
     letter-spacing: 1.8px;
     text-transform: uppercase;
     text-decoration: none;
-  }
 
-  &__orange {
-    color: $orange;
-    font-weight: 400;
+    &--orange {
+      color: $orange;
+      font-weight: 400;
+    }
   }
 
   &__checkbox {
@@ -96,20 +76,20 @@ h6 {
       right: 15px;
     }
 
-    &:checked ~ .top-bar__btn .top-bar__row {
+    &:checked ~ .top-bar__btn .burger__row {
       animation: menuOpened_row;
       animation-duration: 0.2s;
       animation-fill-mode: forwards;
     }
 
-    &:checked ~ .top-bar__btn .top-bar__row::before {
+    &:checked ~ .top-bar__btn .burger__row::before {
       margin-top: 0;
       animation: menuOpened_rowBefore;
       animation-duration: 0.2s;
       animation-fill-mode: forwards;
     }
 
-    &:checked ~ .top-bar__btn .top-bar__row::after {
+    &:checked ~ .top-bar__btn .burger__row::after {
       margin-top: 0;
     }
 
@@ -118,20 +98,20 @@ h6 {
       transition: all 0.2s linear;
     }
 
-    &:not(checked) ~ .top-bar__btn .top-bar__row {
+    &:not(checked) ~ .top-bar__btn .burger__row {
       animation: menuClosed_row;
       animation-duration: 0.2s;
       animation-fill-mode: forwards;
     }
 
-    &:not(checked) ~ .top-bar__btn .top-bar__row::before {
+    &:not(checked) ~ .top-bar__btn .burger__row::before {
       margin-top: -8px;
       animation: menuClosed_rowBefore;
       animation-duration: 0.2s;
       animation-fill-mode: forwards;
     }
 
-    &:not(checked) ~ .top-bar__btn .top-bar__row::after {
+    &:not(checked) ~ .top-bar__btn .burger__row::after {
       margin-top: 8px;
       animation: menuClosed_rowBefore;
       animation-duration: 0.2s;
@@ -154,31 +134,6 @@ h6 {
 
     &:hover {
       cursor: pointer;
-    }
-  }
-
-  &__row {
-    display: flex;
-    width: 100%;
-    height: 3px;
-    background-color: white;
-
-    &::before {
-      position: absolute;
-      display: flex;
-      width: 100%;
-      height: 3px;
-      background-color: white;
-      content: "";
-    }
-
-    &::after {
-      position: absolute;
-      display: flex;
-      width: 100%;
-      height: 3px;
-      background-color: white;
-      content: "";
     }
   }
 
@@ -236,6 +191,33 @@ h6 {
       width: 100%;
       height: 2px;
       background-color: $orange;
+    }
+  }
+}
+
+.burger {
+  &__row {
+    display: flex;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+
+    &::before {
+      position: absolute;
+      display: flex;
+      width: 100%;
+      height: 3px;
+      background-color: white;
+      content: "";
+    }
+
+    &::after {
+      position: absolute;
+      display: flex;
+      width: 100%;
+      height: 3px;
+      background-color: white;
+      content: "";
     }
   }
 }
@@ -347,23 +329,6 @@ h6 {
       box-shadow: 2px 5px 10px 5px rgba(black, 0.5);
     }
 
-    &_title {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 13px 0;
-      color: $form__title;
-      font-size: 18px;
-      background-color: $form__title_bg;
-      border-top-left-radius: 3px;
-      border-top-right-radius: 3px;
-    }
-
-    &_orange {
-      color: $orange;
-      text-transform: uppercase;
-    }
-
     input {
       display: block;
       width: calc(100% - 76px);
@@ -387,52 +352,63 @@ h6 {
         font-size: 14px;
       }
 
-      &:-moz-placeholder {
-        padding-bottom: 10px;
-        color: $form__input_ph;
-        font-size: 14px;
-      }
-
       &:-ms-input-placeholder {
         padding-bottom: 10px;
         color: $form__input_ph;
         font-size: 14px;
       }
     }
+  }
 
-    &_name {
-      margin: 32px auto 0;
-      padding: 0 14px;
+  &__headline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 0;
+    color: $form__title;
+    font-size: 18px;
+    background-color: $form__title_bg;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+
+    &--orange {
+      color: $orange;
+      text-transform: uppercase;
     }
+  }
 
-    &_email {
-      margin: 37px auto 0;
-      padding: 0 14px 0 14px;
-    }
+  &__name {
+    margin: 32px auto 0;
+    padding: 0 14px;
+  }
 
-    &_pwd {
-      margin: 47px auto 0;
-      padding: 0 14px;
-    }
+  &__email {
+    margin: 37px auto 0;
+    padding: 0 14px 0 14px;
+  }
 
-    &_btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 54px;
-      margin-top: 48px;
-      color: white;
-      font-size: 15px;
-      letter-spacing: 0.85px;
-      background-color: $orange;
-      border: 0;
-      border-bottom-right-radius: 3px;
-      border-bottom-left-radius: 3px;
-      transition: all 0.2s linear;
+  &__pwd {
+    margin: 47px auto 0;
+    padding: 0 14px;
+  }
 
-      &:hover {
-        cursor: pointer;
-      }
+  &__started {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 54px;
+    margin-top: 48px;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 0.85px;
+    background-color: $orange;
+    border: 0;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    transition: all 0.2s linear;
+
+    &:hover {
+      cursor: pointer;
     }
   }
 }
@@ -690,7 +666,7 @@ h6 {
     box-shadow: 0px 4px 5px 2px rgba(black, 0.3);
   }
 
-  &__right {
+  &__content {
     width: 100%;
     margin-top: 30px;
     color: $social__desc;
@@ -722,52 +698,49 @@ h6 {
   &__table {
     display: flex;
     flex-direction: column;
-    margin-top: 40px;
+    margin: 40px 0 0;
+    padding: 0;
+    list-style: none;
     border-spacing: 0;
-
-    &_item {
-      display: flex;
-
-      &:nth-child(2) {
-        margin-top: 22px;
-      }
-    }
   }
 
   &__item {
-    &_left {
-      display: flex;
-      min-width: 40px;
-    }
+    display: flex;
+    padding-right: 10px;
 
-    &_right {
-      margin-left: 30px;
+    &:nth-child(2) {
+      margin-top: 22px;
     }
   }
 
   &__left {
-    &_box {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      margin-top: 5px;
-      border: 2px solid $orange;
-      border-radius: 100%;
-    }
+    display: flex;
+    min-width: 40px;
   }
 
   &__right {
-    &_title {
-      font-size: 14px;
-    }
+    margin-left: 30px;
+  }
 
-    &_par {
-      margin-top: 6px;
-      margin-left: 2px;
-      font-size: 12px;
-    }
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+    border: 2px solid $orange;
+    border-radius: 100%;
+  }
+
+  &__title {
+    font-size: 14px;
+  }
+
+  &__par {
+    margin-top: 6px;
+    margin-left: 2px;
+    font-size: 12px;
   }
 }
 
@@ -1553,7 +1526,7 @@ h6 {
       box-shadow: 0px 5px 10px 2px rgba(black, 0.3);
     }
 
-    &__right {
+    &__content {
       margin-left: 50px;
     }
 
@@ -1570,10 +1543,8 @@ h6 {
       font-size: 14px;
     }
 
-    &__right {
-      &_par {
-        font-size: 14px;
-      }
+    &__par {
+      font-size: 14px;
     }
   }
 
@@ -1837,10 +1808,10 @@ h6 {
       right: 0;
       width: 360px;
       margin-top: 57px;
+    }
 
-      &_title {
-        font-size: 20px;
-      }
+    &__headline {
+      font-size: 20px;
     }
   }
 
@@ -1976,7 +1947,7 @@ h6 {
       box-shadow: 0px 8px 10px 6px rgba(black, 0.3);
     }
 
-    &__right {
+    &__content {
       margin-left: 193px;
     }
   }
